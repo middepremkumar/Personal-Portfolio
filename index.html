@@ -300,32 +300,32 @@
         <img src="./images/icons8-close-96.png" alt="Close" />
       </button>
       <div class="popxhed p-4 p-md-5 text-center" style="background: var(--gradient-main); color: var(--text-light); border-top-left-radius: 20px; border-top-right-radius: 20px;">
-        <h2 class="fw-bold mb-2">Got Ideas? Let's team up.</h2>
-        <p style="color: rgba(255, 255, 255, 0.9);">Tell us more about yourself and what you have in mind.</p>
+        <h2 class="fw-bold mb-2" style="font-size: 32px;">Got Ideas? Let's team up.</h2>
+        <p class="mb-0" style="color: rgba(255, 255, 255, 0.9); font-size: 16px;">Tell us more about yourself and what you have in mind.</p>
       </div>
-      <div id="form-container" class="px-4 pb-4 px-md-5 pb-md-5 mt-4">
+      <div id="form-container" class="p-4 p-md-5">
         <form id="contact-form">
           <div class="row g-3 mb-3">
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Full Name" style="border-radius: 10px;" required>
+              <input type="text" name="name" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Full Name" style="border-radius: 8px;" required>
             </div>
             <div class="col-md-6">
-              <input type="email" id="email-input" name="email" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Your @gmail.com Address" style="border-radius: 10px;" required>
+              <input type="email" id="email-input" name="email" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Your @gmail.com Address" style="border-radius: 8px;" required>
             </div>
           </div>
           <div class="mb-3">
-            <input type="text" name="_subject" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Subject" style="border-radius: 10px;" required>
+            <input type="text" name="_subject" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Subject" style="border-radius: 8px;" required>
           </div>
-          <div class="mb-4">
-            <textarea id="message" name="message" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Your Message..." style="height: 120px; resize: none; border-radius: 10px;" required></textarea>
+          <div class="mb-3">
+            <textarea id="message" name="message" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Your Message..." style="height: 100px; resize: none; border-radius: 8px;" required></textarea>
           </div>
           
           <!-- Anti-spam -->
           <input type="checkbox" name="botcheck" style="display:none">
 
-          <div class="d-flex justify-content-center mt-4">
-            <button type="submit" class="hello m-0 shadow-md" id="submit-btn" style="width: 100%; border-radius: 12px; background: var(--gradient-main); border: none; padding: 15px;">Send Message
-              <img src="./images/icons8-arrow-100 (1).png" alt="">
+          <div class="d-flex justify-content-center mt-2">
+            <button type="submit" class="hello m-0 shadow-sm" id="submit-btn" style="width: 100%; border-radius: 8px; background: var(--gradient-main); border: none; padding: 14px; font-size: 18px;">Send Message
+              <img src="./images/icons8-arrow-100 (1).png" alt="" style="height: 22px;">
             </button>
           </div>
         </form>
