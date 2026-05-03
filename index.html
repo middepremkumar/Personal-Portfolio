@@ -295,83 +295,45 @@
       <div class="pg6right p-5"></div>
     </div>
 
-    <div class="pop-box" id="pop-box" popover>
+    <div class="pop-box shadow-lg" id="pop-box" popover>
       <button popovertarget="pop-box" id="close">
-        <img src="./images/icons8-close-96.png" alt="" />
+        <img src="./images/icons8-close-96.png" alt="Close" />
       </button>
-      <div class="popxhed py-0 p-4">
-        <h2 class="bold">Got Ideas? We've got the skills.</h2>
-        <h2 class="bold">Let's team up.</h2>
-        <p>Tell us more about yourself and what you're got in mind.</p>
+      <div class="popxhed p-4 p-md-5 text-center" style="background: var(--gradient-main); color: var(--text-light); border-top-left-radius: 20px; border-top-right-radius: 20px;">
+        <h2 class="fw-bold mb-2">Got Ideas? Let's team up.</h2>
+        <p style="color: rgba(255, 255, 255, 0.9);">Tell us more about yourself and what you have in mind.</p>
       </div>
-      <div id="form-container">
+      <div id="form-container" class="px-4 pb-4 px-md-5 pb-md-5 mt-4">
         <form id="contact-form">
-          <div class="formd1 d-flex p-4 py-0">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name..."
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Full Name" style="border-radius: 10px;" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email-input" name="email" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Your @gmail.com Address" style="border-radius: 10px;" required>
+            </div>
           </div>
-          <div class="formd2 p-4 py-0">
-            <input type="text" name="_subject" placeholder="Subject" required />
+          <div class="mb-3">
+            <input type="text" name="_subject" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Subject" style="border-radius: 10px;" required>
           </div>
-          <div class="formd3 p-4 py-0">
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your Message..."
-              class="message"
-              style="
-                width: 100%;
-                height: 100px;
-                padding: 10px;
-                margin-top: 10px;
-                border: 1px solid gray;
-                border-radius: 2px;
-              "
-              required
-            ></textarea>
+          <div class="mb-4">
+            <textarea id="message" name="message" class="form-control py-3 shadow-sm border-0 bg-light" placeholder="Your Message..." style="height: 120px; resize: none; border-radius: 10px;" required></textarea>
           </div>
+          
+          <!-- Anti-spam -->
+          <input type="checkbox" name="botcheck" style="display:none">
 
-          <!-- Anti-spam & Config for FormSubmit -->
-          <input type="text" name="_honey" style="display: none" />
-          <input type="hidden" name="_captcha" value="false" />
-
-          <button
-            type="submit"
-            class="hello"
-            id="submit-btn"
-            style="margin-left: 25px"
-          >
-            Send Message
-            <img src="./images/icons8-arrow-100 (1).png" alt="" />
-          </button>
+          <div class="d-flex justify-content-center mt-4">
+            <button type="submit" class="hello m-0 shadow-md" id="submit-btn" style="width: 100%; border-radius: 12px; background: var(--gradient-main); border: none; padding: 15px;">Send Message
+              <img src="./images/icons8-arrow-100 (1).png" alt="">
+            </button>
+          </div>
         </form>
-
-        <div
-          id="success-msg"
-          style="display: none; padding: 30px; text-align: center"
-        >
-          <h3
-            class="bold"
-            style="color: #2563eb; margin-bottom: 15px; font-size: 30px"
-          >
-            Thank You!
-          </h3>
-          <p style="color: #475569; font-weight: bold; font-size: 18px">
-            Your message has been successfully sent to Prem Kumar.
-          </p>
-          <p style="color: #475569; margin-top: 15px">
-            Feel free to close this window and continue browsing the portfolio!
-          </p>
+        
+        <div id="success-msg" style="display: none; padding: 30px; text-align: center;">
+          <h3 class="fw-bold mb-3" style="color: var(--primary); font-size: 32px;">Thank You!</h3>
+          <p class="fw-bold fs-5" style="color: var(--text-main);">Your message has been successfully sent to Prem Kumar.</p>
+          <p class="text-muted mt-2">Feel free to close this window and continue browsing the portfolio!</p>
         </div>
       </div>
     </div>
@@ -416,6 +378,13 @@
         contactForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
+          // Custom Gmail Validation
+          const emailInput = document.getElementById('email-input').value.trim();
+          if (!emailInput.toLowerCase().endsWith('@gmail.com')) {
+              alert('Invalid Email: Please provide a valid @gmail.com address.');
+              return;
+          }
+
           // Show loading state
           submitBtn.innerHTML =
             'Sending... <img src="./images/icons8-arrow-100 (1).png" alt="">';
@@ -453,7 +422,7 @@
 
               // Helpful alert for setup
               alert(
-                "Form Failed: Please make sure you have generated a free Web3Forms Access Key and pasted it into index.html at line 303.",
+                "Form Failed: Please make sure you have generated a free Web3Forms Access Key and pasted it into index.html.",
               );
             });
         });
