@@ -226,20 +226,34 @@
       <h2 class="bold">Let's team up.</h2>
       <p>Tell us more about yourself and what you're got in mind.</p>
     </div>
-    <form>
-      <div class="formd1 d-flex p-4 py-0">
-        <input type="text" placeholder="Full Name...">
-        <input type="email" placeholder="Your Eamil">
-      </div>
-      <div class="formd2 p-4 py-0">
-        <input type="text" placeholder="Subject">
-      </div>
-      <div class="formd3 p-4 py-0">
-        <input type="text" id="message" placeholder="Your Message..." class="message">
-      </div>
+    <div id="form-container">
+      <form id="contact-form">
+        <div class="formd1 d-flex p-4 py-0">
+          <input type="text" name="name" placeholder="Full Name..." required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="formd2 p-4 py-0">
+          <input type="text" name="_subject" placeholder="Subject" required>
+        </div>
+        <div class="formd3 p-4 py-0">
+          <textarea id="message" name="message" placeholder="Your Message..." class="message" style="width: 100%; height: 100px; padding: 10px; margin-top: 10px; border: 1px solid gray; border-radius: 2px;" required></textarea>
+        </div>
+        
+        <!-- Anti-spam & Config for FormSubmit -->
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
 
-      <button class="hello" id="close-contact">Send Message</button>
-    </form>
+        <button type="submit" class="hello" id="submit-btn" style="margin-left: 25px;">Send Message
+          <img src="./images/icons8-arrow-100 (1).png" alt="">
+        </button>
+      </form>
+      
+      <div id="success-msg" style="display: none; padding: 30px; text-align: center;">
+        <h3 class="bold" style="color: #2563eb; margin-bottom: 15px; font-size: 30px;">Thank You!</h3>
+        <p style="color: #475569; font-weight: bold; font-size: 18px;">Your message has been successfully sent to Prem Kumar.</p>
+        <p style="color: #475569; margin-top: 15px;">Feel free to close this window and continue browsing the portfolio!</p>
+      </div>
+    </div>
   </div>
   <footer>
     <div class="foter p-5 py-0">
@@ -269,6 +283,56 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+  <!-- Contact Form Logic -->
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    const successMsg = document.getElementById('success-msg');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitBtn.innerHTML = 'Sending... <img src="./images/icons8-arrow-100 (1).png" alt="">';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+
+        const formData = new FormData(contactForm);
+        
+        // ==========================================
+        // ⚠️ YOUR WEB3FORMS ACCESS KEY GOES HERE! ⚠️
+        // ==========================================
+        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                // Success! Hide the form and show the thank you message
+                contactForm.style.display = 'none';
+                successMsg.style.display = 'block';
+            } else {
+                console.log(response);
+                throw new Error(json.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            submitBtn.innerHTML = 'Send Message <img src="./images/icons8-arrow-100 (1).png" alt="">';
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            
+            // Helpful alert for setup
+            alert('Form Failed: Please make sure you have generated a free Web3Forms Access Key and pasted it into index.html at line 303.');
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
