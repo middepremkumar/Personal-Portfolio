@@ -1,432 +1,385 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prem Kumar - Freelance Web Developer specializing in responsive, user-friendly websites." />
+  <title>Prem Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
 
-  <body>
-    <div class="header">
-      <div class="header_logo">
-        <img
-          src="./images/sye-removebg-preview.png"
-          alt="Logo"
-          class="syelogo"
-        />
+  <!-- NAVBAR -->
+  <nav class="header">
+    <div class="syelogo"></div>
+    <div class="header_menu" id="header_menu">
+      <ul>
+        <li><a href="#home" class="nav-link-item">Home</a></li>
+        <li><a href="#aboutme" class="nav-link-item">About Me</a></li>
+        <li><a href="#services" class="nav-link-item">Services</a></li>
+        <li><a href="#projects" class="nav-link-item">Projects</a></li>
+        <li class="nav-chat-mobile">
+          <a href="#chat" class="btnchat">
+            <button id="lets-chat-btn-mobile">Let's chat</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header_right">
+      <div class="header_btn">
+        <a href="#chat" class="btnchat">
+          <button id="lets-chat-btn">Let's chat</button>
+        </a>
       </div>
-      <div class="header_menu">
-        <ul class="nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#aboutme">About Me</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
-        <br />
-        <div class="header_btn">
-          <button><a href="#chat" class="btnchat">Let's chat</a></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="pg1">
+    <div class="pg1left d-flex flex-column justify-content-center px-5">
+      <div class="pg1ltd1">
+        <h2 class="pg1ltd1h2 fw-bold mb-3">Hi! I'm Prem Kumar</h2>
+        <h1 class="pg1ltd1h1">Freelance Web<br />Developer</h1>
+        <p class="mt-3" style="color:var(--text-muted);font-size:1.1rem;line-height:1.7;">
+          &bull; Let's Build the Web the Way You've Always Imagined It.<br />
+          &bull; Crafting seamless, user-friendly web experiences with a focus on design in application.
+        </p>
+      </div>
+      <div class="pg1ltd3 d-flex justify-content-around mt-4">
+        <div class="pg1ltd3d1 txtcen bold">
+          <b style="font-size:2rem;color:var(--primary);">50+</b>
+          <p style="color:var(--text-muted);font-size:0.9rem;">Worldwide Clients</p>
+        </div>
+        <div class="pg1ltd3d1 txtcen bold">
+          <b style="font-size:2rem;color:var(--primary);">7+</b>
+          <p style="color:var(--text-muted);font-size:0.9rem;">Projects Done</p>
+        </div>
+        <div class="pg1ltd3d1 txtcen bold">
+          <b style="font-size:2rem;color:var(--primary);">2+</b>
+          <p style="color:var(--text-muted);font-size:0.9rem;">Years Experience</p>
         </div>
       </div>
     </div>
-    <section id="home"></section>
-    <div class="pg1">
-      <div class="pg1left">
-        <div class="pg1ltd1">
-          <h2 class="pg1ltd1h2 bold">Hi! I'm Lucky...</h2>
-          <h1 class="pg1ltd1h1">
-            Freelance <br />Web <br />
-            Developer
-          </h1>
-          <p>•Let’s Build the Web the Way You’ve Always Imagined It.</p>
-          <p>
-            •Crafting seamless, user-friendly web experiences with a focus on
-            design in application.
-          </p>
-        </div>
-        <!-- <div class="pg1ltd2 d-flex justify-content-evenly">
-        <input type="button" name="" id="" value="Developer" class="pg1ltd2input" />
-        <input type="button" name="" id="" value="Resume" class="pg1ltd2input" />
-      </div> -->
-        <div class="pg1ltd3 d-flex justify-content-around">
-          <div class="pg1ltd3d1 txtcen bold">
-            <b>50+</b>
-            <p>Worldwide Clients</p>
-          </div>
-          <div class="pg1ltd3d1 txtcen bold">
-            <b>7+</b>
-            <p>Projects Done</p>
-          </div>
-          <div class="pg1ltd3d1 txtcen bold">
-            <b>2+</b>
-            <p>Years Experience</p>
-          </div>
-        </div>
+    <div class="pg1right">
+      <div class="pg1rightimg"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="aboutme" class="pg2 container-fluid px-5 pb-5">
+    <div class="pg2d1 d-flex align-items-center m-3 mx-0 bold">
+      <img src="./images/icons8-circle-64.png" alt="" class="star" />&nbsp;About Me...!
+    </div>
+    <div class="pg2d2 m-3 mx-0 bold">Hi! I'm Prem Kumar</div>
+    <div class="pg2d3 m-4 mx-0" style="color:var(--text-muted);max-width:700px;line-height:1.8;">
+      I'm a freelance web developer specializing in creating responsive, user-friendly websites.
+      With a passion for clean code and modern design, I help businesses establish their online presence.
+      Let's bring your vision to life!
+    </div>
+    <div class="pg2d4 d-flex flex-wrap gap-4 m-3 mx-0 mt-4">
+      <div>
+        <p><b>Contact</b></p>
+        <a href="mailto:prem123690@gmail.com" class="email-a">prem123690@gmail.com</a>
       </div>
-      <div class="pg1right">
-        <div class="pg1rightimg"></div>
+      <div>
+        <p><b>Phone</b></p>
+        <a href="tel:+917671811808" class="phone-a">+91 7671811808</a>
+      </div>
+      <div>
+        <p><b>Spoken Languages</b></p>
+        <p style="color:var(--text-muted);">English &middot; Telugu &middot; Hindi</p>
+      </div>
+      <div>
+        <p><b>Interest</b></p>
+        <p style="color:var(--text-muted);">Music, Chess, Gaming</p>
+      </div>
+      <div>
+        <p><b>Social Media</b></p>
+        <a href="https://www.linkedin.com/in/prem-kumar-b08a7b320/" target="_blank" rel="noopener">
+          <img src="./images/linkedin.png" alt="LinkedIn" class="linkedin" />
+        </a>
+        &nbsp;
+        <a href="https://cssbattle.dev/player/kumar_1729" target="_blank" rel="noopener">
+          <img src="./images/cssbattle.png" alt="CSS Battle" class="cssbattle" />
+        </a>
       </div>
     </div>
-    <div class="pg2 m-5" id="aboutme">
-      <div class="pg2d1 d-flex align-items-center m-3 mx-0 bold">
-        <img src="./images/icons8-circle-64.png" alt="" class="star" />About
-        Me...!
-      </div>
-      <div class="pg2d2 m-3 mx-0 bold">Hi! I'm Prem Kumar</div>
-      <div class="pg2d3 m-4 mx-0">
-        I'm a freelance web developer specializing in creating responsive,
-        user-friendly websites. With a passion for clean code and modern design,
-        I help businesses establish their online presence. Let's bring your
-        ideas to life with a custom-built website tailored to your needs.
-      </div>
-      <div class="pg2d4 d-flex gap-5 m-3 mx-0">
-        <div class="pgd4d1 m-3 mx-0">
-          <p class="bold">Contact</p>
-          <a href="#" class="email-a">prem123690@gmail.com</a>
-        </div>
-        <div class="pg2d4d2 m-3 mx-0">
-          <p class="bold">Phone</p>
-          <a href="#" class="phone-a">+91 7671811808</a>
-        </div>
-        <div class="pg2d4d3 m-3 mx-0">
-          <p class="bold">Spoken Languages</p>
-          <p>English-Telugu-Hindi</p>
-        </div>
-        <div class="pg2d4d4 m-3 mx-0">
-          <p class="bold">Interest</p>
-          <p>Music,Chess,Gaming</p>
-        </div>
-      </div>
-      <div class="pg2d5 m-3 mx-0">
-        <p class="bold">Social Media</p>
-        <div class="pg2d5d1 d-flex gap-3 m-3 mx-0">
-          <a href="#"
-            ><img
-              src="./images/icons8-linkedin-48.png"
-              alt="Linkedin"
-              class="linkedin"
-          /></a>
-          <a href="#"
-            ><img src="./images/icons8-github-50.png" alt="Github"
-          /></a>
-          <a href="#"
-            ><img
-              src="./images/BIu19jPP_400x400.png"
-              alt="Cssbattle"
-              class="cssbattle"
-          /></a>
-        </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="pg3 container-fluid px-5 pb-5">
+    <div class="pg3d1 d-flex align-items-center m-3 mx-0">
+      <div class="pg3d1d1 bold">Services</div>
+    </div>
+    <div class="pg3d2 m-3 mx-0 bold">What I Offer</div>
+    <div class="pg3d3 m-3 mx-0">
+      <div class="pg3d3d1">
+        Delivering high-quality solutions across the full stack — from beautiful frontends to robust backends.
       </div>
     </div>
-    <div class="pg3 m-5 mx-0" id="services">
-      <div class="pg3d1 d-flex justify-content-center">
-        <div class="pg3d1d1 d-flex align-items-center m-3 mx-0 bold p-3">
-          <img
-            src="./images/icons8-circle-64.png"
-            alt=""
-            class="star"
-          />Services...!
-        </div>
+    <div class="pg4 d-flex m-3 mx-0 mt-4">
+      <div class="pg4d1">
+        <img src="./images/icons8-html-5-100.png" alt="Front End" class="imgcard1 mb-3" />
+        <h3 class="bold">Front End</h3>
+        <p class="pg4d1p">
+          Delivering responsive and user-friendly front-end development services, including custom UI/UX design,
+          HTML, CSS, and JavaScript implementation for seamless web experiences.
+        </p>
       </div>
-      <div class="pg3d2 bold txtcen m-3 mx-0">Services I Offer</div>
-      <div class="pg3d3 txtcen d-flex justify-content-center m-3 mx-0">
-        <div class="pg3d3d1">
-          Bringing your ideas to the web with precision and passion. As a
-          freelance web developer, I create custom solutions that elevate your
-          online presence and drive success.
-        </div>
+      <div class="pg4d2">
+        <img src="./images/icons8-backend-100.png" alt="Back End" class="imgcard2 mb-3" />
+        <h3 class="bold">Back End</h3>
+        <p class="pg4d1p">
+          Offering expert backend development services, including API design, database integration,
+          and server management to build scalable, secure, and high-performance applications.
+        </p>
       </div>
-      <div class="pg4 d-flex p-5">
-        <div class="pg4d1">
-          <img src="./images/icons8-backend-64.png" alt="" class="imgcard1" />
-          <h2 class="bold">Front End</h2>
-          <p class="pg4d1p">
-            Delivering responsive and user-friendly front-end development
-            services, including custom UI/UX design, HTML, CSS, and JavaScript
-            implementation for seamless web experiences.
-          </p>
+      <div class="pg4d3">
+        <img src="./images/icons8-programming-100.png" alt="Programming" class="imgcard3 mb-3" />
+        <h3 class="bold">Programming</h3>
+        <p class="pg4d1p">
+          Providing freelance programming services for custom software solutions, app development,
+          and system integration to meet your unique business needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="pg5 container-fluid px-5 pb-5">
+    <div class="pg5d1 d-flex align-items-center m-3 mx-0">
+      <div class="pg2d1 bold">Projects</div>
+    </div>
+    <div class="pg5d2 m-3 mx-0 bold">My Work</div>
+    <div class="pg5d3 m-3 mx-0">
+      <div class="pg5d3d1">
+        A showcase of the projects I've built — from responsive dashboards to creative CSS battle solutions.
+      </div>
+    </div>
+
+    <!-- Project 1 -->
+    <div class="pg5d4 m-3 mx-0 mt-4">
+      <div class="pg5d4d1">
+        <div class="pg5d4d1d1 mb-2">Appexy Dashboard</div>
+        <div class="m-2 mx-0">
+          <a href="./task14/index.html" class="pg5d4d1d1a bold p-2 mx-0">
+            <img src="./images/icons8-circle-64.png" alt="" class="star" />&nbsp;Click me...!
+          </a>
         </div>
-        <div class="pg4d2">
-          <img
-            src="./images/icons8-backend-64 (1).png"
-            alt=""
-            class="imgcard2"
-          />
-          <h2 class="bold">Back End</h2>
-          <p class="pg4d1p">
-            Offering expert backend development services, including API design,
-            database integration, and server management to build scalable,
-            secure, and high-performance applications.
-          </p>
+        <div class="pg5d4d1d4 m-4 mx-0">
+          <p><b>&bull; Project Duration:</b> 7 days</p>
+          <p><b>&bull; Client:</b> Appexy</p>
+          <p><b>&bull; Role:</b> Front-end Developer</p>
         </div>
-        <div class="pg4d3">
-          <img
-            src="./images/icons8-backend-64 (2).png"
-            alt=""
-            class="imgcard3"
-          />
-          <h2 class="bold">Programming</h2>
-          <p class="pg4d1p">
-            Providing freelance programming services for custom software
-            solutions, app development, and system integration to meet your
-            unique business needs.
-          </p>
+        <div class="pg5d4d1d2img"></div>
+        <div class="pg5d4d1d3 m-5 mx-0" style="color:var(--text-muted);line-height:1.8;">
+          <p>&bull; Modern &amp; Responsive: Built with Tailwind CSS for a sleek and adaptive design.</p>
+          <p>&bull; Minimalist UI: Clean and well-structured layout for better user experience.</p>
+          <p>&bull; Pre-built Components: Includes ready-to-use widgets, charts, and UI elements.</p>
+          <p>&bull; Dark Mode Support: Seamless switch between light and dark themes.</p>
+          <p>&bull; Highly Customizable: Easy to modify and integrate into various web applications.</p>
         </div>
       </div>
     </div>
-    <div class="pg5 m-5 mx-0" id="projects">
-      <div class="pg3d1 d-flex justify-content-center">
-        <div class="pg3d1d1 d-flex align-items-center m-3 mx-0 bold p-3">
-          <img
-            src="./images/icons8-circle-64.png"
-            alt=""
-            class="star"
-          />Selected work...!
-        </div>
+
+    <!-- Project 2: CSS Battle -->
+    <div class="pg5d4d2 mt-5 m-3 mx-0">
+      <div class="csshed1 bold mb-3">CSS Battle Gallery</div>
+      <div class="pg5d4d2d1 flex-wrap gap-2">
+        <div class="cssd1bx1"></div>
+        <div class="cssd1bx2"></div>
+        <div class="cssd1bx3"></div>
       </div>
-      <div class="pg5d2 bold txtcen m-5 mx-0">
-        Showcasing My Remarkable Projects
+      <div class="pg5d4d2d2 flex-wrap gap-2 mt-2">
+        <div class="cssd2bx4"></div>
+        <div class="cssd2bx5"></div>
+        <div class="cssd2bx6"></div>
       </div>
-      <div class="pg5d3 txtcen d-flex justify-content-center m-3 mx-0">
-        <div class="pg5d3d1">
-          builds and designs websites for clients on a contract basis, utilizing
-          their technical skills to craft customized digital experiences.
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="pg5d4 p-5">
-        <div class="pg5d4d1">
-          <div class="pg5d4d1d1 bold m-3 mx-0">Clone of Appexy website</div>
-          <div class="pg5d4d1d4 m-4 mx-0">
-            <p><b> • Project Duration:</b> 7 days</p>
-            <p><b> • Client:</b> Appexy</p>
-            <p><b> • Role:</b> Front-end Developer</p>
-          </div>
-          <div class="m-4 mx-0">
-            <a href="./task14/index.html" class="pg5d4d1d1a bold p-2 mx-0"
-              ><img
-                src="./images/icons8-circle-64.png"
-                alt=""
-                class="star"
-              />Click me...!</a
-            >
-          </div>
-          <div class="pg5d4d1d2img"></div>
-          <div class="pg5d4d1d3 m-5 mx-0">
-            <p>
-              <b> • Modern & Responsive:</b> Built with Tailwind CSS for a sleek
-              and adaptive design.
-            </p>
-            <p>
-              <b> • Minimalist UI:</b> Clean and well-structured layout for
-              better user experience.
-            </p>
-            <p>
-              <b> • Pre-built Components:</b> Includes ready-to-use widgets,
-              charts, and UI elements.
-            </p>
-            <p>
-              <b> • Dark Mode Support:</b> Seamless switch between light and
-              dark themes.
-            </p>
-            <p>
-              <b> • Highly Customizable:</b> Easy to modify and integrate into
-              various web applications.
-            </p>
-          </div>
-          <div class="line"></div>
-        </div>
-        <div class="csshed">
-          <div class="csshed1 bold p-3 px-0">Css Battle Tasks</div>
-          <div class="cssfot p-2 px-0">
-            <p><b> • Projects:</b> 70+</p>
-            <p><b> • Accuracy:</b> 99.67%</p>
-            <p><b> • Avg characters:</b> 637</p>
-          </div>
-          <div class="csslink d-flex">
-            <a
-              href="https://cssbattle.dev/player/kumar_1729"
-              class="pg5d4d1d1a bold p-2 mx-0"
-              ><img
-                src="./images/icons8-circle-64.png"
-                alt=""
-                class="star"
-              />Click me...!</a
-            >
-          </div>
-        </div>
-        <div class="pg5d4d2">
-          <div class="pg5d4d2d1 p-3 px-0">
-            <div class="cssd1bx1"></div>
-            <div class="cssd1bx2"></div>
-            <div class="cssd1bx3"></div>
-          </div>
-          <div class="pg5d4d2d2 p-3 px-0">
-            <div class="cssd2bx4"></div>
-            <div class="cssd2bx5"></div>
-            <div class="cssd2bx6"></div>
-          </div>
-        </div>
-        <div class="line m-3 mx-0"></div>
+      <div class="m-3 mx-0 mt-3">
+        <p style="color:var(--text-muted);">&bull; Projects: 70+ &nbsp;|&nbsp; &bull; Accuracy: 99.67% &nbsp;|&nbsp; &bull; Avg characters: 637</p>
+        <a href="https://cssbattle.dev/player/kumar_1729" target="_blank" rel="noopener"
+          class="pg5d4d1d1a bold p-2 mt-2 d-inline-block">
+          <img src="./images/icons8-circle-64.png" alt="" class="star" />&nbsp;Click me...!
+        </a>
       </div>
     </div>
-    <div class="pg6 d-flex" id="chat">
-      <div class="pg6left d-flex justify-content-center p-5">
-        <h1 class="bold pg6leftfont">
-          Have a project in mind? Let’s get to work.
-        </h1>
-        <button class="hello" id="open-contact" popovertarget="pop-box">
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="chat" class="pg6 d-flex">
+    <div class="pg6left d-flex px-5">
+      <div>
+        <div class="pg6leftfont fw-bold">Have a project<br />in mind?<br />Let's get to<br />work.</div>
+        <a href="#" popovertarget="pop-box" class="hello">
           Say Hello
           <img src="./images/icons8-arrow-100 (1).png" alt="" />
-        </button>
-      </div>
-      <div class="pg6right p-5"></div>
-    </div>
-
-    <div class="pop-box shadow-lg" id="pop-box" popover>
-      <button popovertarget="pop-box" id="close">
-        <img src="./images/icons8-close-96.png" alt="Close" />
-      </button>
-      <div class="popxhed p-4 p-md-5 text-center" style="background: var(--gradient-main); color: var(--text-light); border-top-left-radius: 20px; border-top-right-radius: 20px;">
-        <h2 class="fw-bold mb-2" style="font-size: 32px;">Got Ideas? Let's team up.</h2>
-        <p class="mb-0" style="color: rgba(255, 255, 255, 0.9); font-size: 16px;">Tell us more about yourself and what you have in mind.</p>
-      </div>
-      <div id="form-container" class="p-4 p-md-5">
-        <form id="contact-form">
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Full Name" style="border-radius: 8px;" required>
-            </div>
-            <div class="col-md-6">
-              <input type="email" id="email-input" name="email" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Your @gmail.com Address" style="border-radius: 8px;" required>
-            </div>
-          </div>
-          <div class="mb-3">
-            <input type="text" name="_subject" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Subject" style="border-radius: 8px;" required>
-          </div>
-          <div class="mb-3">
-            <textarea id="message" name="message" class="form-control py-2 shadow-sm border-0 bg-light" placeholder="Your Message..." style="height: 100px; resize: none; border-radius: 8px;" required></textarea>
-          </div>
-          
-          <!-- Anti-spam -->
-          <input type="checkbox" name="botcheck" style="display:none">
-
-          <div class="d-flex justify-content-center mt-2">
-            <button type="submit" class="hello m-0 shadow-sm" id="submit-btn" style="width: 100%; border-radius: 8px; background: var(--gradient-main); border: none; padding: 14px; font-size: 18px;">Send Message
-              <img src="./images/icons8-arrow-100 (1).png" alt="" style="height: 22px;">
-            </button>
-          </div>
-        </form>
-        
-        <div id="success-msg" style="display: none; padding: 30px; text-align: center;">
-          <h3 class="fw-bold mb-3" style="color: var(--primary); font-size: 32px;">Thank You!</h3>
-          <p class="fw-bold fs-5" style="color: var(--text-main);">Your message has been successfully sent to Prem Kumar.</p>
-          <p class="text-muted mt-2">Feel free to close this window and continue browsing the portfolio!</p>
-        </div>
+        </a>
       </div>
     </div>
-    <footer>
-      <div class="foter p-5 py-0">
-        <div class="fotrd1">
-          <div class="phone">
-            <img src="./images/icons8-phone-501.png" alt="" />
-            <p>Mon-Fri from 8am to 5pm.</p>
-            <p>+91 7671811808</p>
+    <div class="pg6right"></div>
+  </section>
+
+  <!-- CONTACT POPUP -->
+  <div class="pop-box shadow-lg" id="pop-box" popover>
+    <button popovertarget="pop-box" id="close">
+      <img src="./images/icons8-close-96.png" alt="Close" />
+    </button>
+    <div class="popxhed p-4 p-md-5 text-center"
+      style="background:var(--gradient-main);color:var(--text-light);border-top-left-radius:20px;border-top-right-radius:20px;">
+      <h2 class="fw-bold mb-2" style="font-size:32px;">Got Ideas? Let's team up.</h2>
+      <p class="mb-0" style="color:rgba(255,255,255,0.9);font-size:16px;">Tell us more about yourself and what you have in mind.</p>
+    </div>
+    <div id="form-container" class="p-4">
+      <form id="contact-form">
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <input type="text" id="contact-name" name="name" placeholder="Full Name..."
+              class="form-control py-3" required />
           </div>
-          <div class="email">
-            <img src="./images/icons8-email-501.png" alt="" />
-            <p>Our friendly team is there to help.</p>
-            <p>prem123690@gmail.com</p>
-          </div>
-          <div class="location">
-            <img src="./images/icons8-location-501.png" alt="" />
-            <p>Come say hello at our office HQ.</p>
-            <p>Tirupati,Andhra Pradesh,India</p>
+          <div class="col-md-6">
+            <input type="email" id="contact-email" name="email" placeholder="Gmail Address..."
+              class="form-control py-3" required />
+            <div id="email-error" style="color:#dc3545;font-size:13px;margin-top:4px;display:none;">
+              &#9888; Invalid Email: Please provide a valid @gmail.com address.
+            </div>
           </div>
         </div>
-        <div class="fotrd2">
-          <div class="line white m-3 mx-0"></div>
-          <p>Copy Copyright 2025, All Rights Reserved.</p>
+        <div class="mb-3">
+          <textarea id="contact-message" name="message" placeholder="Your message..."
+            class="form-control py-3" rows="4" required></textarea>
+        </div>
+        <div class="text-end">
+          <button type="submit" id="submit-btn" class="hello" style="margin-top:0;border:none;">
+            Send Message
+            <img src="./images/icons8-arrow-100 (1).png" alt="" />
+          </button>
+        </div>
+      </form>
+      <div id="success-msg" style="display:none;text-align:center;padding:30px 10px;">
+        <div style="font-size:60px;">&#127881;</div>
+        <h3 class="fw-bold mt-3" style="color:var(--primary);">Thank You!</h3>
+        <p style="color:var(--text-muted);margin-top:10px;line-height:1.7;">
+          Your message has been successfully sent to <b>Prem Kumar</b>.<br />
+          Feel free to close this window and continue browsing the portfolio!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foter">
+      <div class="fotrd1">
+        <div class="phone">
+          <img src="./images/icons8-phone-501.png" alt="" style="height:40px;" />
+          <p style="margin-top:8px;color:var(--text-light-muted);">Mon-Fri from 8am to 5pm.</p>
+          <a href="tel:+917671811808" class="phone-a">+91 7671811808</a>
+        </div>
+        <div class="email">
+          <img src="./images/icons8-email-501.png" alt="" style="height:40px;" />
+          <p style="margin-top:8px;color:var(--text-light-muted);">Our friendly team is here to help.</p>
+          <a href="mailto:prem123690@gmail.com" class="email-a">prem123690@gmail.com</a>
+        </div>
+        <div class="location">
+          <img src="./images/icons8-location-501.png" alt="" style="height:40px;" />
+          <p style="margin-top:8px;color:var(--text-light-muted);">Come say hello at our office HQ.</p>
+          <p style="color:var(--text-light-muted);">Tirupati, Andhra Pradesh, India</p>
         </div>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      <div class="fotrd2 text-center">
+        <p style="color:var(--text-light-muted);font-size:14px;">
+          &copy; Copyright 2025, All Rights Reserved. Developed by <b>Prem Kumar</b>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Contact Form Logic -->
-    <script>
-      const contactForm = document.getElementById("contact-form");
-      const successMsg = document.getElementById("success-msg");
-      const submitBtn = document.getElementById("submit-btn");
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jl64OSGJJoXIKjlxd4bQQAr9eRcq"
+    crossorigin="anonymous"></script>
 
-      if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-          e.preventDefault();
+  <script>
+    const contactForm = document.getElementById('contact-form');
+    const successMsg  = document.getElementById('success-msg');
+    const submitBtn   = document.getElementById('submit-btn');
+    const emailInput  = document.getElementById('contact-email');
+    const emailError  = document.getElementById('email-error');
 
-          // Custom Gmail Validation
-          const emailInput = document.getElementById('email-input').value.trim();
-          if (!emailInput.toLowerCase().endsWith('@gmail.com')) {
-              alert('Invalid Email: Please provide a valid @gmail.com address.');
-              return;
-          }
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-          // Show loading state
-          submitBtn.innerHTML =
-            'Sending... <img src="./images/icons8-arrow-100 (1).png" alt="">';
-          submitBtn.disabled = true;
-          submitBtn.style.opacity = "0.7";
+        const emailVal = emailInput.value.trim();
+        if (!emailVal.endsWith('@gmail.com')) {
+          emailError.style.display = 'block';
+          emailInput.focus();
+          return;
+        }
+        emailError.style.display = 'none';
 
-          const formData = new FormData(contactForm);
+        submitBtn.innerHTML = 'Sending... <img src="./images/icons8-arrow-100 (1).png" alt="">';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
 
-          // ==========================================
-          // ⚠️ YOUR WEB3FORMS ACCESS KEY GOES HERE! ⚠️
-          // ==========================================
-          formData.append("access_key", "880a65fd-1f38-4312-9d8b-83e901b48de2");
+        const formData = new FormData(contactForm);
+        formData.append('access_key', '880a65fd-1f38-4312-9d8b-83e901b48de2');
 
-          fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
+        fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
+          .then(r => r.json())
+          .then(data => {
+            if (data.success) {
+              contactForm.style.display = 'none';
+              successMsg.style.display  = 'block';
+            } else {
+              alert('Something went wrong. Please try again.');
+              submitBtn.innerHTML = 'Send Message <img src="./images/icons8-arrow-100 (1).png" alt="">';
+              submitBtn.disabled  = false;
+              submitBtn.style.opacity = '1';
+            }
           })
-            .then(async (response) => {
-              let json = await response.json();
-              if (response.status == 200) {
-                // Success! Hide the form and show the thank you message
-                contactForm.style.display = "none";
-                successMsg.style.display = "block";
-              } else {
-                console.log(response);
-                throw new Error(json.message);
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              submitBtn.innerHTML =
-                'Send Message <img src="./images/icons8-arrow-100 (1).png" alt="">';
-              submitBtn.disabled = false;
-              submitBtn.style.opacity = "1";
+          .catch(() => {
+            alert('Network error. Please check your connection and try again.');
+            submitBtn.innerHTML = 'Send Message <img src="./images/icons8-arrow-100 (1).png" alt="">';
+            submitBtn.disabled  = false;
+            submitBtn.style.opacity = '1';
+          });
+      });
 
-              // Helpful alert for setup
-              alert(
-                "Form Failed: Please make sure you have generated a free Web3Forms Access Key and pasted it into index.html.",
-              );
-            });
-        });
-      }
-    </script>
-  </body>
+      emailInput.addEventListener('input', function () {
+        emailError.style.display =
+          (emailInput.value.trim() && !emailInput.value.trim().endsWith('@gmail.com'))
+            ? 'block' : 'none';
+      });
+    }
+
+    /* ── Hamburger Menu ── */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('header_menu');
+    const navLinks  = document.querySelectorAll('.nav-link-item, #lets-chat-btn-mobile');
+
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('mobile-open');
+    });
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('mobile-open');
+      });
+    });
+  </script>
+
+</body>
 </html>
